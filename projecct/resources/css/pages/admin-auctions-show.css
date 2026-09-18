@@ -1,0 +1,40 @@
+.au-show-head {
+    background: linear-gradient(180deg, rgba(21,94,239,0.08) 0%, var(--card) 60%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+}
+.au-show-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #155eef 0%, #1e40af 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 18px rgba(21, 94, 239, 0.4);
+}
+.au-show-head .toolbar-title { font-size: 1.2rem; font-weight: 700; }
+.au-show-img {
+    height: 300px;
+    object-fit: contain;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: block;
+}
+.il-0c39d920 { background:#22c55e; border-color:#22c55e; }
+.il-df74e8d8 { overflow-x:auto; }
+.il-11305aad { white-space:pre-line; }
+.il-74d4b081 { font-size:17px; }
+.il-21012f0e { width:46px; height:46px; border-radius:50%; overflow:hidden; flex-shrink:0; }
+.il-621f54ce { width:100%; height:100%; object-fit:cover; }
+.il-d8427f2c { font-weight:600; font-size:14px; }
+.il-fd058b25 { font-size:12px; opacity:.5; }
+.il-0442c83c { width:30px; height:30px; border-radius:50%; object-fit:cover; }
+.il-48a238e0 { font-weight:600; font-size:12.5px; }
+.il-bcf88ef7 { font-size:10px; }

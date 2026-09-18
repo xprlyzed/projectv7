@@ -1,0 +1,23 @@
+.stream-mode-opt { display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; border:1px solid var(--border); background:var(--bg-soft); color:var(--muted); font-size:13px; font-weight:600; cursor:pointer; transition:all .15s; }
+.stream-mode-opt input { display:none; }
+.stream-mode-opt.active { border-color:var(--primary); color:var(--primary); background:rgba(21,94,239,.08); }
+.stream-mode-opt i { font-size:16px; }
+.il-68e96972 { background:rgba(220,38,38,.15); color:#ef4444; }
+.il-21752a43 { border-color:var(--border); margin:16px 0; }
+.il-4cfc3add { border-radius:10px; overflow:hidden; aspect-ratio:16/9; background:#000; }
+.il-dde969d2 { width:100%; height:100%; object-fit:contain; }
+.il-636ca6ec { width:100%; height:100%; border:0; }
+.il-96d97174 { height:380px; object-fit:contain; background:var(--bg); border-radius:16px; }
+.il-df74e8d8 { overflow-x:auto; }
+.il-11305aad { white-space:pre-line; }
+.il-173ac8af { background:rgba(21,94,239,.12); }
+.il-035cc887 { color:var(--primary); }
+.il-bf83cf1c { font-size:18px; }
+.il-a345efbb { background:rgba(16,185,129,.12); }
+.il-29fb9df2 { color:#10b981; }
+.il-7da3c027 { background:rgba(251,191,36,.12); }
+.il-38288887 { color:#fbbf24; }
+.il-af97e19a { background:rgba(239,68,68,.1); }
+.il-124741b6 { color:#f87171; }
+.il-8f633ef6 { border-radius:50%; }
+.il-93e62ea6 { font-weight:600; font-size:var(--fs-sm); }

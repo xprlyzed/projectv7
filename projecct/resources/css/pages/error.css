@@ -1,0 +1,194 @@
+.stage {
+    --accent: #155EEF;
+    --accent-2: #F5A623;
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(1200px 600px at 50% -12%, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 60%),
+        var(--bg, #070810);
+    color: var(--text, #fff);
+    overflow: hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.stage.is-403, .stage.is-429 { --accent: #F5A623; --accent-2: #155EEF; }
+.stage.is-500 { --accent: #ef4444; --accent-2: #F5A623; }
+.stage.is-503 { --accent: #10b981; --accent-2: #155EEF; }
+
+.aurora {
+    position: absolute;
+    width: 46vmax;
+    height: 46vmax;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.45;
+    pointer-events: none;
+    will-change: transform;
+}
+.aurora-a {
+    background: radial-gradient(circle, var(--accent) 0%, transparent 68%);
+    top: -14vmax;
+    left: -10vmax;
+    animation: drift-a 16s ease-in-out infinite;
+}
+.aurora-b {
+    background: radial-gradient(circle, var(--accent-2) 0%, transparent 68%);
+    bottom: -16vmax;
+    right: -12vmax;
+    opacity: 0.32;
+    animation: drift-b 20s ease-in-out infinite;
+}
+@keyframes drift-a {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(6vmax, 4vmax) scale(1.12); }
+}
+@keyframes drift-b {
+    0%, 100% { transform: translate(0, 0) scale(1.05); }
+    50% { transform: translate(-5vmax, -4vmax) scale(0.95); }
+}
+
+.grid-veil {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(color-mix(in srgb, var(--text, #fff) 6%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--text, #fff) 6%, transparent) 1px, transparent 1px);
+    background-size: 54px 54px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 45%, #000 30%, transparent 75%);
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+}
+.content > * { animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.content > :nth-child(2) { animation-delay: 0.08s; }
+.content > :nth-child(3) { animation-delay: 0.16s; }
+.content > :nth-child(4) { animation-delay: 0.24s; }
+.content > :nth-child(5) { animation-delay: 0.32s; }
+@keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.numeral {
+    position: relative;
+    height: clamp(150px, 30vh, 260px);
+    display: grid;
+    place-items: center;
+    margin-bottom: 2px;
+}
+.numeral-ghost,
+.numeral-main {
+    grid-area: 1 / 1;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.06em;
+    font-size: clamp(9rem, 30vw, 18rem);
+}
+.numeral-ghost {
+    color: transparent;
+    -webkit-text-stroke: 1.5px color-mix(in srgb, var(--text, #fff) 9%, transparent);
+    transform: translateY(4px) scale(1.12);
+    user-select: none;
+}
+.numeral-main {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 20px 55px color-mix(in srgb, var(--accent) 38%, transparent));
+    animation: shimmer 7s linear infinite;
+}
+@keyframes shimmer { to { background-position: 200% center; } }
+
+.title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 4px 0 10px;
+    color: var(--text, #fff);
+}
+.message {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--muted, rgba(255, 255, 255, 0.62));
+    max-width: 440px;
+    margin: 0 auto 32px;
+}
+
+.actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 14px 26px;
+    border-radius: 14px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.18s ease, box-shadow 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+.btn i { font-size: 1.05rem; }
+.btn-primary {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 72%, #000));
+    box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 38%, transparent);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 40px color-mix(in srgb, var(--accent) 50%, transparent); }
+.btn-ghost {
+    color: var(--text, #fff);
+    background: color-mix(in srgb, var(--text, #fff) 5%, transparent);
+    border-color: color-mix(in srgb, var(--text, #fff) 16%, transparent);
+    backdrop-filter: blur(6px);
+}
+.btn-ghost:hover { transform: translateY(-3px); background: color-mix(in srgb, var(--text, #fff) 11%, transparent); }
+
+.links {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--text, #fff) 4%, transparent);
+    border: 1px solid color-mix(in srgb, var(--text, #fff) 8%, transparent);
+}
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--muted, rgba(255, 255, 255, 0.6));
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.link:hover { color: var(--text, #fff); }
+.dot { width: 4px; height: 4px; border-radius: 50%; background: color-mix(in srgb, var(--text, #fff) 24%, transparent); }
+
+@media (max-width: 520px) {
+    .actions { flex-direction: column; }
+    .btn { width: 100%; justify-content: center; }
+    .links { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aurora, .numeral-main, .content > * { animation: none !important; }
+}

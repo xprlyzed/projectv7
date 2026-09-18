@@ -1,0 +1,4 @@
+.story-ring img { background-color: var(--bg-soft); }
+
+.story-strip { scroll-snap-type: x proximity; }
+.story-item { scroll-snap-align: start; }

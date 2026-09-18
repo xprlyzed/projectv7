@@ -1,0 +1,142 @@
+<?php
+
+return [
+
+    'accepted' => ':attribute kabul edilmelidir.',
+    'accepted_if' => ':other :value olduğunda :attribute kabul edilmelidir.',
+    'active_url' => ':attribute geçerli bir URL olmalıdır.',
+    'after' => ':attribute :date tarihinden sonra olmalıdır.',
+    'after_or_equal' => ':attribute :date tarihinden sonra veya eşit olmalıdır.',
+    'alpha' => ':attribute sadece harf içermelidir.',
+    'alpha_dash' => ':attribute sadece harf, sayı ve tire içermelidir.',
+    'alpha_num' => ':attribute sadece harf ve sayı içermelidir.',
+    'array' => ':attribute bir dizi olmalıdır.',
+    'before' => ':attribute :date tarihinden önce olmalıdır.',
+    'before_or_equal' => ':attribute :date tarihinden önce veya eşit olmalıdır.',
+
+    'between' => [
+        'numeric' => ':attribute :min ile :max arasında olmalıdır.',
+        'file' => ':attribute :min ile :max KB arasında olmalıdır.',
+        'string' => ':attribute :min ile :max karakter arasında olmalıdır.',
+        'array' => ':attribute :min ile :max arasında eleman içermelidir.',
+    ],
+
+    'boolean' => ':attribute alanı doğru ya da yanlış olmalıdır.',
+    'confirmed' => ':attribute onayı uyuşmuyor.',
+    'current_password' => 'Mevcut şifre yanlış.',
+    'date' => ':attribute geçerli bir tarih olmalıdır.',
+    'date_equals' => ':attribute :date tarihine eşit olmalıdır.',
+    'date_format' => ':attribute formatı :format olmalıdır.',
+    'different' => ':attribute ve :other farklı olmalıdır.',
+    'digits' => ':attribute :digits basamaklı olmalıdır.',
+    'digits_between' => ':attribute :min ile :max basamak arasında olmalıdır.',
+    'email' => ':attribute geçerli bir e-posta adresi olmalıdır.',
+    'exists' => 'Seçilen :attribute geçersiz.',
+    'file' => ':attribute dosya olmalıdır.',
+    'image' => ':attribute resim olmalıdır.',
+    'in' => 'Seçilen :attribute geçersiz.',
+    'integer' => ':attribute tam sayı olmalıdır.',
+    'max' => [
+        'numeric' => ':attribute en fazla :max olabilir.',
+        'string' => ':attribute en fazla :max karakter olabilir.',
+        'file' => ':attribute en fazla :max KB olabilir.',
+        'array' => ':attribute en fazla :max eleman içerebilir.',
+    ],
+
+    'min' => [
+        'numeric' => ':attribute en az :min olmalıdır.',
+        'string' => ':attribute en az :min karakter olmalıdır.',
+        'file' => ':attribute en az :min KB olmalıdır.',
+        'array' => ':attribute en az :min eleman içermelidir.',
+    ],
+
+    'not_in' => 'Seçilen :attribute geçersiz.',
+    'numeric' => ':attribute sayı olmalıdır.',
+    'required' => ':attribute alanı zorunludur.',
+    'same' => ':attribute ve :other aynı olmalıdır.',
+    'string' => ':attribute metin olmalıdır.',
+    'unique' => ':attribute zaten kullanılıyor.',
+
+    'url' => ':attribute geçerli bir URL olmalıdır.',
+
+
+    'attributes' => [
+        // Kimlik / hesap
+        'name' => 'Ad Soyad',
+        'username' => 'Kullanıcı Adı',
+        'email' => 'E-posta',
+        'password' => 'Şifre',
+        'password_confirmation' => 'Şifre Tekrar',
+        'current_password' => 'Mevcut Şifre',
+        'currentpassword' => 'Mevcut Şifre',
+        'confirmemailpassword' => 'Mevcut Şifre',
+        'delete_password' => 'Şifre',
+        'phone' => 'Telefon',
+        'role' => 'Hesap Türü',
+        'token' => 'Doğrulama Kodu',
+        'bio' => 'Hakkında',
+        'avatar' => 'Profil Fotoğrafı',
+        'profile_image' => 'Profil Fotoğrafı',
+
+        // Gizlilik ayarları
+        'profile_public' => 'Profil Herkese Açık',
+        'bids_hidden' => 'Teklifleri Gizle',
+        'show_online' => 'Çevrimiçi Görünürlük',
+        'email_notifications' => 'E-posta Bildirimleri',
+        'messages_followers_only' => 'Sadece Takip Ettiklerinden Mesaj',
+
+        // İlan / açık artırma
+        'title' => 'Başlık',
+        'description' => 'Açıklama',
+        'category_id' => 'Kategori',
+        'category' => 'Kategori',
+        'starting_price' => 'Başlangıç Fiyatı',
+        'reserve_price' => 'Rezerv Fiyatı',
+        'buy_now_price' => 'Hemen Al Fiyatı',
+        'min_bid_increment' => 'Minimum Artış Miktarı',
+        'condition' => 'Ürün Durumu',
+        'location' => 'Konum',
+        'starts_at' => 'Başlangıç Tarihi',
+        'ends_at' => 'Bitiş Tarihi',
+        'images' => 'Görseller',
+        'images.*' => 'Görsel',
+        'image' => 'Görsel',
+        'promo_video_url' => 'Tanıtım Videosu',
+        'amount' => 'Tutar',
+        'rating' => 'Puan',
+        'comment' => 'Yorum',
+        'review' => 'Değerlendirme',
+
+        // Kategori
+        'slug' => 'Kısa Ad (Slug)',
+        'parent_id' => 'Üst Kategori',
+        'is_active' => 'Durum',
+        'sort_order' => 'Sıralama',
+
+        // Mesaj / destek
+        'body' => 'Mesaj',
+        'message' => 'Mesaj',
+        'subject' => 'Konu',
+        'details' => 'Açıklama',
+        'reason' => 'Gerekçe',
+        'decision' => 'Karar',
+        'caption' => 'Açıklama',
+
+        // Ödeme / bakiye / kargo
+        'payment_method' => 'Ödeme Yöntemi',
+        'card_holder' => 'Kart Sahibi',
+        'card_number' => 'Kart Numarası',
+        'card_expiry' => 'Son Kullanma Tarihi',
+        'card_cvv' => 'CVV',
+        'iban' => 'IBAN',
+        'recipient_name' => 'Alıcı Adı',
+        'recipient_phone' => 'Alıcı Telefonu',
+        'address_line' => 'Adres',
+        'address_city' => 'İl',
+        'address_district' => 'İlçe',
+        'address_zip' => 'Posta Kodu',
+        'tracking_number' => 'Takip Numarası',
+        'tracking_url' => 'Takip Bağlantısı',
+        'carrier' => 'Kargo Firması',
+    ],
+];
